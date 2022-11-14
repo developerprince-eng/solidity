@@ -29,6 +29,7 @@ RUN curl --silent "https://api.github.com/repos/Z3Prover/z3/releases/36678822" |
 # Get .NET
 RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
   && dpkg -i packages-microsoft-prod.deb \
+  && add-apt-repository universe
   && apt update \
   && apt install -y apt-transport-https \
   && apt update \
